@@ -1,38 +1,491 @@
-.App {
-  text-align: center;
+* {
+  font-family: Synthese, sans-serif;
+  line-height: 1.5em;
+  font-size: 0.9vw;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contr {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.colm-1 {
+  width: 5em;
+}
+.colm-12 {
+}
+.colm-2 {
+  width: 18%;
+  font-size: 16px;
+}
+.colm-3 {
+  width: 50%;
+  font-size: 16px;
+}
+.colm-4 {
+  width: 24.5%;
+  font-size: 16px;
+}
+.nav-mobile {
+  width: 100%;
+  height: 3.5rem;
+  background-color: #5964ff;
+  display: none;
+  z-index: 1;
+}
+.leftnav-mobile {
+  padding-top: 1em;
+  position: "fixed";
+  top: 0;
+  left: 0;
+  background-color: #26262a;
+  display: none;
+  height: 100%;
+}
+.rightnav-mobile {
+  width: 5em;
+  height: 1000px;
+  background-color: #26262a;
+  display: none;
+}
+
+.sidenav {
+  background-color: #5964ff;
+  height: 100%;
+  padding-top: 1em;
+  position: "fixed";
+  top: 0;
+  left: 0;
+}
+.navbtn {
+  padding: 1.5em;
+}
+.navbtn:hover {
+  cursor: pointer;
+}
+.navbtnActive {
+  border-left: solid 0.2em white;
+  background-color: #6a73ff;
+}
+.logo {
+  padding-bottom: 3.5em;
+  align-content: center;
+}
+.circle {
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  background-color: white;
+  margin-left: 0.6em;
+  margin-top: 1em;
+  border: solid 2px #6a73ff;
+}
+.avatarimg {
+  margin-left: 0.8em;
+  margin-top: 1em;
+}
+.avatar {
+  position: relative;
+  top: 18em;
+}
+.sidebar {
+  height: 100%;
+}
+.team {
+  padding: 1.3em;
+  border-bottom: solid 0.1em #e5e5e5;
+}
+.downarrow:hover {
+  cursor: pointer;
+}
+.team span {
+  color: #999898;
+}
+.storage {
+  padding: 1.3em;
+}
+.storage h2 {
+  font-size: 1.8rem;
+  font-weight: 650;
+}
+.folder {
+  margin-bottom: 0.4em;
+}
+.foldersnav {
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+}
+.storage-sections {
+  padding-top: 1.3em;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.sidebottom {
+  width: 16em;
+  height: 17em;
+  background-color: #f0f5fc;
+  margin: auto;
+  margin-top: 3em;
+  border-radius: 0.8em;
+  padding: 1em;
+}
+
+.createbtn {
+  width: 13.5em;
+  height: 3em;
+  background-color: #5964ff;
+  margin: auto;
+  border-radius: 0.5em;
+  font-size: 1.3rem;
+}
+.createbtn button {
+  width: 100%;
+  color: white;
+  background-color: #5964ff;
+  border: none;
+  margin-top: 0.6em;
+}
+.content {
+  background-color: #f0f5fc;
+  height: 100%;
+  padding: 2rem;
+  margin: auto;
+}
+.search {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5em;
+  background-color: white;
+  margin-bottom: 3rem;
+}
+.searchinput {
+  width: 68%;
+  height: 2rem;
+  border: none;
+  background-color: white;
+}
+.searchinput:focus {
+  outline: none;
+}
+.searchinput::placeholder {
+  color: #c1c1c1;
+  font-size: 1.2rem;
+}
+.drive-container {
+  display: flex;
+}
+.drive {
+  width: 16em;
+  height: 13em;
+  background-color: white;
+  border-radius: 0.6em;
+  padding: 1.3em;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0em 0.5em;
+}
+.row-drive {
+  margin: auto;
+}
+.drive:hover {
+  width: 18em;
+  height: 15em;
+  background-color: #5964ff;
+  border-radius: 0.6em;
+  padding: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: -0.5em;
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+.activedrive {
+  width: 15em;
+  height: 14em;
+  background-color: #5964ff;
+  border-radius: 0.6em;
+  padding: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0.7em;
+  margin-top: -0.2em;
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+.activedrive .drivelogo {
+  padding: 0.7em;
+  background-color: white;
+  border-radius: 0.6em;
+  width: 4em;
+}
+.drive:hover .drivelogo {
+  padding: 0.7em;
+  background-color: white;
+  border-radius: 0.6vw;
+  width: 4em;
+}
+.drive:hover .grey-storage {
+  margin-top: 0.6em;
+  width: 100%;
+  height: 0.5em;
+  background-color: white;
+  border-radius: 0.8em;
+}
+.activedrive .grey-storage {
+  margin-top: 0.6em;
+  width: 100%;
+  height: 0.5em;
+  background-color: white;
+  border-radius: 0.8em;
+}
+
+.drive:hover.drive .used {
+  height: 0.5em;
+  border-radius: 0.8em;
+  background-color: #fbbc44;
+}
+.activedrive .used {
+  height: 0.5em;
+  border-radius: 0.8em;
+  background-color: #fbbc44;
+}
+.drivelnk:hover {
+  text-decoration: none;
+  margin: auto;
+}
+.drivelogo {
+  padding: 0.5em;
+  background-color: #f0f5fc;
+  border-radius: 0.6vw;
+  width: 3.5em;
+}
+.drive h4 {
+  font-size: 1.2em;
+  color: #0c1a30;
+  margin-bottom: 0.8em;
+  text-decoration: none;
+}
+.drive:hover h4 {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 1em;
+  text-decoration: none;
+}
+.activedrive h4 {
+  font-size: 1.2em;
+  color: white;
+  margin-bottom: 1em;
+  text-decoration: none;
+}
+.drive:hover span {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.activedrive span {
+  color: white;
+}
+.drive span {
+  font-size: 0.8em;
+  color: black;
+}
+.drive .grey-storage {
+  margin-top: 0.6em;
+  width: 100%;
+  height: 0.4em;
+  background-color: #f0f5fc;
+  border-radius: 0.8vw;
+}
+.drive .used {
+  height: 0.4em;
+  border-radius: 0.8vw;
+  background-color: #5964ff;
+}
+.folderdetail {
+  width: 15em;
+  height: 9em;
+  background-color: white;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  padding: 1em;
+  margin: 0.7em;
 }
 
-@keyframes App-logo-spin {
+.folderdetail h4 {
+  font-size: 1em;
+  color: #0c1a30;
+  margin-bottom: 0.2em;
+  margin-top: 0.6em;
+}
+.closed {
+  display: none;
+}
+.file {
+  margin-left: 1.7em;
+  width: 10em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.extension {
+  height: 2.8em;
+  width: 2.8em;
+  border-radius: 0.4em;
+  text-align: center;
+  vertical-align: middle;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 2.8em;
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+.filenav:hover {
+  background-color: white;
+  cursor: pointer;
+}
+.filenav:hover td:first-child {
+  border-top-left-radius: 0.8em;
+  border-bottom-left-radius: 0.8em;
+}
+.filenav:hover td:last-child {
+  border-top-right-radius: 0.8em;
+  border-bottom-right-radius: 0.8em;
+}
+.capacity {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.greystr {
+  margin-top: 1.2em;
+  width: 100%;
+  height: 0.8em;
+  background-color: #f0f5fc;
+  border-radius: 1em;
+}
+.icon {
+  height: 3.5em;
+  width: 3.9em;
+  border-radius: 0.5em;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 3.3em;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #efeffd;
+}
+.type {
+  margin-top: 2em;
+}
+.upgrade {
+  height: 27em;
+  width: 80%;
+  border: solid 0.2em #d1dae5;
+  border-radius: 1.4em;
+  margin: 10%;
+  text-align: center;
+  box-shadow: -1.6em -1.6em #f0f5fc;
+  margin-top: 6em;
+}
+
+.upgradebtn {
+  width: 50%;
+  height: 2.5em;
+  color: white;
+  background-color: #5964ff;
+  margin: 5%;
+  border: none;
+  border-radius: 0.4em;
+  margin-top: 1em;
+  font-size: 1.2rem;
+}
+.open {
+  margin: 0.5em;
+}
+.plus {
+  margin: auto;
+  float: right;
+  height: 2.2em;
+  width: 2.2em;
+  background-color: #7983ff;
+  border-radius: 0.4em;
+  margin-right: 0.3em;
+}
+.rightbar {
+  padding-left: 1.5em;
+}
+
+/* responsivity */
+@media (max-width: 1200px) {
+  * {
+    font-size: 14px;
+  }
+  .leftnav-mobile,
+  .rightnav-mobile {
+    display: block;
+  }
+
+  .colm-2,
+  .colm-4 {
+    display: none;
+  }
+  .colm-3 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  * {
+    font-size: 12px;
+  }
+  .leftnav-mobile,
+  .rightnav-mobile {
+    display: block;
+  }
+
+  .colm-2,
+  .colm-4 {
+    display: none;
+  }
+  .colm-3 {
+    width: 100%;
+  }
+  .firsttd {
+    width: "20em";
+  }
+  .drive {
+    margin: 1.5em 0.5em;
+  }
+}
+/*-----------------------------*/
+
+.front {
+  position: absolute;
+  background-color: black;
+  height: 100%;
+  position: "fixed";
+  width: 100%;
+  opacity: 0.7;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.w3-animate-right {
+  position: relative;
+  animation: animateright 0.4s;
+}
+@keyframes animateright {
   from {
-    transform: rotate(0deg);
+    right: -300px;
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    right: 0;
+    opacity: 1;
   }
 }
