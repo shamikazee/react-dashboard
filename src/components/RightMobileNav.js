@@ -22,7 +22,7 @@ export default class RightMobileNav extends Component {
   render() {
     return (
       <div className="leftnav-mobile">
-        <div style={{ width: "5em" }}>
+        <div style={{ width: "3.5em" }}>
           <Menu
             size="2em"
             color="white"
